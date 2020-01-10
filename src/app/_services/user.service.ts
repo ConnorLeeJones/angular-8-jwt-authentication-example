@@ -10,5 +10,7 @@ export class UserService {
 
     getAll() {
         return this.http.get<User[]>(`${environment.apiUrl}/users`);
+        // console.log(users);
+        // return users;
     }
 }

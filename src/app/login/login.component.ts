@@ -52,10 +52,15 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 data => {
                     this.router.navigate([this.returnUrl]);
+                    // console.log(data)
                 },
                 error => {
+                    console.log('er')
                     this.error = error;
                     this.loading = false;
                 });
+
+        // console.log(this.authenticationService.currentUserValue)
+        // console.log(this.returnUrl)
     }
 }
